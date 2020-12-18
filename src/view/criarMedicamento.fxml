@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="349.0" prefWidth="444.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.criarMedicamentoController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="466.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Abrir">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Medicação" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Editar">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Paciente" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <ImageView disable="true" fitHeight="191.0" fitWidth="444.0" layoutX="-5.0" layoutY="87.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.jpeg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
+      <Button fx:id="btnSalvar" layoutX="374.0" layoutY="310.0" mnemonicParsing="false" onAction="#OnClickSalvar" text="Salvar" />
+      <Button fx:id="btnVoltar" layoutX="36.0" layoutY="310.0" mnemonicParsing="false" onAction="#OnClickVoltar" text="Voltar" />
+      <Label fx:id="labelNome" layoutX="32.0" layoutY="46.0" text="Nome" />
+      <Label fx:id="labelFone" layoutX="40.0" layoutY="258.0" text="Fone SAC" />
+      <Label fx:id="labelFabricante" layoutX="33.0" layoutY="91.0" text="Fabricante" />
+      <Label fx:id="labelEfeitos" layoutX="32.0" layoutY="126.0" text="Efeitos colaterais" />
+      <TextField fx:id="textFieldNome" layoutX="97.0" layoutY="42.0" prefHeight="25.0" prefWidth="337.0" />
+      <TextField fx:id="textFieldFabricante" layoutX="97.0" layoutY="87.0" prefHeight="25.0" prefWidth="337.0" />
+      <TextArea fx:id="textAreaEfeitos" layoutX="135.0" layoutY="126.0" prefHeight="110.0" prefWidth="299.0" />
+      <TextField fx:id="textFieldFone" layoutX="97.0" layoutY="254.0" prefHeight="25.0" prefWidth="136.0" />
+      <CheckBox fx:id="checkBoxControlado" layoutX="285.0" layoutY="258.0" mnemonicParsing="false" text="Remédio Controlado" />
+   </children>
+</AnchorPane>

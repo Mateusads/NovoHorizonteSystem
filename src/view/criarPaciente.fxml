@@ -1,39 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="442.0" prefWidth="461.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.criarPacienteController">
    <children>
+      <ImageView fx:id="imgViewLogo" disable="true" fitHeight="205.0" fitWidth="461.0" layoutX="4.0" layoutY="155.0" opacity="0.16" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/logo.jpeg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </ImageView>
       <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="461.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu mnemonicParsing="false" text="Abrir">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem mnemonicParsing="false" text="Medicação" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu mnemonicParsing="false" text="Editar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" text="Paciente" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Help">
-            <items>
-              <MenuItem mnemonicParsing="false" text="About" />
-            </items>
-          </Menu>
+            <Menu mnemonicParsing="false" text="Edit">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="About" />
+               </items>
+            </Menu>
         </menus>
       </MenuBar>
-      <Label layoutX="14.0" layoutY="37.0" text="Nome" />
-      <Label layoutX="14.0" layoutY="76.0" text="Idade" />
-      <Label layoutX="14.0" layoutY="112.0" text="Sexo" />
-      <TextField fx:id="nomeTextField" layoutX="63.0" layoutY="33.0" prefHeight="25.0" prefWidth="385.0" />
-      <TextField fx:id="idadeTextField" layoutX="63.0" layoutY="72.0" prefHeight="25.0" prefWidth="30.0" />
-      <ChoiceBox fx:id="sexoChoiceBox" layoutX="63.0" layoutY="108.0" prefWidth="150.0" />
+      <Label fx:id="labelNome" layoutX="15.0" layoutY="64.0" text="Nome" />
+      <Label fx:id="labelCPF" layoutX="20.0" layoutY="181.0" text="CPF" />
+      <Label fx:id="labelSexo" layoutX="18.0" layoutY="213.0" text="Sexo" />
+      <TextField fx:id="nomeTextField" layoutX="61.0" layoutY="60.0" prefHeight="25.0" prefWidth="385.0" />
+      <TextField fx:id="sobreNomeTextField" layoutX="86.0" layoutY="96.0" prefHeight="24.0" prefWidth="362.0" />
+      <TextField fx:id="naturalidadeTextField" layoutX="102.0" layoutY="141.0" prefHeight="25.0" prefWidth="143.0" text="Curitiba" />
+      <TextField fx:id="DataNacimentoTextField" layoutX="368.0" layoutY="141.0" prefHeight="25.0" prefWidth="87.0" />
+      <TextField fx:id="cpfTextField" layoutX="47.0" layoutY="177.0" prefHeight="25.0" prefWidth="185.0" />
+      <TextField fx:id="rgTextField" layoutX="279.0" layoutY="177.0" prefHeight="25.0" prefWidth="168.0" />
+      <ChoiceBox fx:id="sexoChoiceBox" layoutX="51.0" layoutY="209.0" prefWidth="150.0" />
+      <TextField fx:id="nomeMaeTextField" layoutX="102.0" layoutY="240.0" prefHeight="25.0" prefWidth="350.0" />
+      <Button fx:id="btnVoltar" layoutX="16.0" layoutY="403.0" mnemonicParsing="false" onAction="#OnClickVoltar" text="Voltar" />
+      <Label fx:id="labelSobrenome" layoutX="16.0" layoutY="100.0" text="Sobrenome" />
+      <Label fx:id="labelNaturalidade" layoutX="17.0" layoutY="145.0" text="Naturalidade" />
+      <Label fx:id="labelDataNacimento" layoutX="255.0" layoutY="145.0" text="Data de Nacimento" />
+      <Label fx:id="labelRG" layoutX="253.0" layoutY="181.0" text="RG" />
+      <Label fx:id="labelNomeMae" layoutX="13.0" layoutY="244.0" text="Nome da Mãe" />
+      <ImageView fx:id="imageFieldFotoPaciente" fitHeight="150.0" fitWidth="150.0" layoutX="156.0" layoutY="281.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/fotoPerfil.png" />
+         </image></ImageView>
+      <Label fx:id="labelFotoPaciente" layoutX="195.0" layoutY="264.0" text="Foto Paciente" />
+      <Button fx:id="btnFotoPaciente" layoutX="191.0" layoutY="416.0" mnemonicParsing="false" onAction="#OnclickFoto" text="Carregar Img" />
+      <Button fx:id="btnSavePaciente" layoutX="375.0" layoutY="392.0" mnemonicParsing="false" onAction="#OnClickSavePaciente" prefHeight="36.0" prefWidth="72.0" text="Salvar" />
+      <Button fx:id="btnLimparDados" layoutX="190.0" layoutY="27.0" mnemonicParsing="false" onAction="#OnClickLimpar" text="Limpar dados">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

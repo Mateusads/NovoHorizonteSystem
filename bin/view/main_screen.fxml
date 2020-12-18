@@ -5,27 +5,26 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.Pane?>
-<?import javafx.scene.paint.RadialGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="telaPrincipal" prefHeight="336.0" prefWidth="352.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
+<AnchorPane fx:id="telaPrincipal" prefHeight="570.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainController">
    <children>
-      <MenuBar fx:id="menuPrincipál" layoutY="2.0" prefHeight="25.0" prefWidth="352.0">
+      <MenuBar fx:id="menuPrincipál" layoutY="2.0" prefHeight="25.0" prefWidth="740.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu fx:id="menuAbrir" mnemonicParsing="false" text="Abrir">
             <items>
-              <MenuItem mnemonicParsing="false" text="Close" />
+              <MenuItem fx:id="menuPaciente" mnemonicParsing="false" onAction="#OnClickPaciente" text="Paciente" />
+                  <MenuItem fx:id="menuContrato" mnemonicParsing="false" onAction="#OnClickContrato" text="Contrato" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu fx:id="menuEditar" mnemonicParsing="false" text="Editar">
             <items>
-              <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem fx:id="menuEditarPaciente" mnemonicParsing="false" onAction="#OnClickEditPaciente" text="Paciente" />
+                  <MenuItem fx:id="menuEditarMedicacao" mnemonicParsing="false" onAction="#OnClickEditMedicacao" text="Medicação" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">
@@ -35,8 +34,24 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Button fx:id="apagarBtn" layoutX="208.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnClickApagar" text="Apagar" />
-      <Button fx:id="criarBtn" layoutX="14.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnClickCriar" text="Criar" />
-      <Button fx:id="editarBtn" layoutX="114.0" layoutY="40.0" mnemonicParsing="false" onAction="#OnClickEditar" text="Editar" />
+      <Button fx:id="btnBuscaPaciente" layoutX="34.0" layoutY="348.0" mnemonicParsing="false" onAction="#OnClickBuscaPaciente" prefHeight="69.0" prefWidth="115.0" text="Buscar Paciente" />
+      <Button fx:id="btnAddPaciente" layoutX="34.0" layoutY="111.0" mnemonicParsing="false" onAction="#OnClickCriar" prefHeight="56.0" prefWidth="115.0" text="Adicionar Paciente" />
+      <Button fx:id="btnAddMedicamento" layoutX="28.0" layoutY="196.0" mnemonicParsing="false" onAction="#OnClickCriarMedicamento" prefHeight="69.0" prefWidth="129.0" text="Adicionar Medicação" textAlignment="CENTER" />
+      <Separator layoutX="178.0" layoutY="34.0" orientation="VERTICAL" prefHeight="522.0" prefWidth="3.0" />
+      <Label layoutX="52.0" layoutY="34.0" prefHeight="63.0" prefWidth="80.0" text="CADASTRAR">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="65.0" layoutY="271.0" prefHeight="63.0" prefWidth="55.0" text="BUSCAR">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBuscaContrato" layoutX="34.0" layoutY="449.0" mnemonicParsing="false" onAction="#OnClickBuscaContrato" prefHeight="69.0" prefWidth="115.0" text="Buscar Contrato" />
+      <ImageView fx:id="logoFoneImageView" fitHeight="417.0" fitWidth="488.0" layoutX="218.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../bin/img/logoComFone.jpeg" />
+         </image></ImageView>
    </children>
 </AnchorPane>
